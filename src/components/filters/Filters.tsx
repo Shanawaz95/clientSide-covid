@@ -34,7 +34,6 @@ function Filters({filters,setFilter}:filterProps) {
 
     const {loading, data} = useQuery(FETCH_FILTERS)
 
-
     return loading?<div className="load2"></div>:(
       <>
         <div className="selectContainer anim">

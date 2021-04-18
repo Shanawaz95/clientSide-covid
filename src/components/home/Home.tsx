@@ -75,11 +75,12 @@ let {loading, data} = useQuery(FETCH_ALL,{variables: filters});
           <XAxis dataKey="_id"
                           tickFormatter = {(_id) => moment(new Date(_id)).format('MM/YY')}
                           type='number'
-                          domain={['auto', 'auto']}
+                          domain={['dataMin', 'dataMax']}
                           scale="auto"
+                          tickCount={10}
           
           />
-          <YAxis domain={['dataMin', 'dataMax']} />
+          <YAxis tickCount={20} domain={['auto', 'auto']} />
           <Tooltip labelFormatter= {(ele:number) => moment(new Date(Number(ele))).format("DD-MM-YYYY")}/>
           <Legend />
           <Bar dataKey="active" stackId="a" fill="#363491" />
