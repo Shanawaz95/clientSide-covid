@@ -73,14 +73,14 @@ let {loading, data} = useQuery(FETCH_ALL,{variables: filters});
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="_id"
-                          tickFormatter = {(_id) => moment(new Date(_id)).format('MM-YY')}
+                          tickFormatter = {(_id) => moment(new Date(_id)).format('MM/YY')}
                           type='number'
                           domain={['auto', 'auto']}
                           scale="auto"
           
           />
           <YAxis domain={['dataMin', 'dataMax']} />
-          <Tooltip />
+          <Tooltip labelFormatter= {(ele:number) => moment(new Date(Number(ele))).format("DD-MM-YYYY")}/>
           <Legend />
           <Bar dataKey="active" stackId="a" fill="#363491" />
           <Bar dataKey="recovered" stackId="a" fill="#349158" />
