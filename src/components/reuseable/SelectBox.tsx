@@ -27,7 +27,7 @@ function SelectBox({fieldName,filters, setFilter, options, defaultOpt}:selectBox
       }
 
       let isDate = false;
-      if (fieldName=="from" || fieldName=="to") {
+      if (fieldName==="from" || fieldName==="to") {
         isDate=true
       }
 
