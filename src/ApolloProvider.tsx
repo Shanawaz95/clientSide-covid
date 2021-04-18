@@ -8,7 +8,7 @@ import {
 
 
 const client = new ApolloClient({
-    uri:"http://localhost:5000",
+    uri:"https://warm-island-01388.herokuapp.com/",
     cache: new InMemoryCache()
 })
 
